@@ -1,7 +1,19 @@
+@font-face {
+    font-family: AlexBrush;
+    src: url(../font/alex-brush/AlexBrush-Regular.ttf);
+}
+@font-face {
+    font-family: RamadhanAmazing;
+    src: url(../font/ramadhan-amazing-font/RamadhanAmazing-jEnDv.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+a {
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-5/sym460.cur), auto !important;
 }
 .container {
     width: 100vw;
@@ -14,33 +26,150 @@
     text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.4);
     position: relative;
     overflow: hidden;
+    background-image: url(../img/hasan-almasi-6M3_19hsDaw-unsplash.jpg);
+    background-size: cover;
 }
 .container .hujan {
     width: 10px;
     height: 10px;
-    background-color: #A4BC92;
-    border: 1px solid white;
+    background-color: #454545;
+    background: radial-gradient(white 8%, #454545 60%, transparent 80%);
+    /* border: .5px solid #45454559; */
+    box-shadow: 0px 0px 5px 3px #454545, 0px 0px 10px 3px #454545;
     position: absolute;
+    top: -30px;
     display: inline-block;
-    animation: turunHujan 3s linear infinite;
+    animation: turunHujan 6s linear .1s infinite;
+    transform: rotate(45deg);
 }
 @keyframes turunHujan {
     0% {
         top: -20%;
+        /* transform: rotateY(0deg) rotate(45deg) scale(calc(var(--i) / 2)); */
     }
     100% {
         top: 110%;
+        /* transform: rotateY(360deg) rotate(45deg) scale(calc(var(--i) / 2)); */
     }
+}
+.donate {
+    position: absolute;
+    top: 10px;
+    font-family: AlexBrush;
+    background: linear-gradient(to right, black, red, white);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.donate a {
+    text-decoration: none;
+    color: transparent;
+    font-size: 2rem;
 }
 .card {
     width: 80vw;
     height: 80vh;
-    background-color: #C7E9B0;
+    background-color: #c7e9b02f;
+    background: linear-gradient(#c7e9b02f 10%, rgba(255, 255, 255, 0.425) 35%, #c7e9b02f 90%);
+    background-size: cover;
+    background-blend-mode: multiply;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     border-radius: 8px;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5),
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6),
+                5px 5px 20px rgba(0, 0, 0, 0.6),
+                5px 5px 30px rgba(0, 0, 0, 0.6),
+                5px 5px 40px rgba(0, 0, 0, 0.6),
                 inset 1px 1px 2px white;
+    padding: 30px 15px;
+    text-align: center;
+    animation: animate 3s linear infinite alternate;
+}
+.card-img {
+    width: 60%;
+    height: 30%;
+    overflow: hidden;
+    border-radius: 510px;
+    margin: 30px 0px;
+    position: relative;
+    box-shadow: 
+        0px 0px 5px 2px #fd9002,
+        0px 0px 10px 0px white,
+        0px 0px 20px 0px white,
+        0px 0px 30px 0px white,
+        0px 0px 40px 0px white;
+}
+.card-img:before {
+    content: '';
+    background-image: radial-gradient(white 60%, #B78D57 70%, white 80%);
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top:0;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+}
+.card h2, .card p {
+    color: #104515;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    font-family: arial, sans-serif;
+    font-size: .8rem;
+}
+.card h2 {
+    font-family: AlexBrush;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: transparent;
+    background-image: linear-gradient(to right, gray, white, gray, white, gray);
+    -webkit-background-clip: text;
+}
+.card p {
+    color: #104515;
+    font-style: italic;
+    font-size: .8rem;
+}
+.card h3 {
+    margin-top: 20px;
+    color: transparent;
+    font-family: RamadhanAmazing, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+    /* font-weight: 400; */
+    margin-bottom: 20px;
+    background-image: linear-gradient(to bottom right,#104515 50%, black);
+    -webkit-background-clip: text;
+    /* letter-spacing: 1px; */
+    /* word-spacing: 2px; */
+}
+.card q {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    color: #eee;
+    font-family: arial;
+}
+footer {
+    position: absolute;
+    bottom: 20px;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    /* cursor: url(https://cur.cursors-4u.net/symbols/sym-5/sym460.cur), auto !important; */
+}
+footer a:visited {
+    color: #454545;
+}
+footer a:active {
+    color:#DDFFBB;
+}
+@keyframes animate {
+    0% {
+        transform: translateY(-5px)
+    }
+    100% {
+        transform: translateY(5px)
+    }
 }
