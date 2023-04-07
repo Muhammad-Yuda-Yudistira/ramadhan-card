@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box form {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 30px;
+}
+.box label, .box input, .box button {
+    margin: 5px 0;
+}
+.box label, .box input {
+    width: 100%;
+}
+.box label {
+    margin: 5px;
+    text-align: left;
+}
+.box button {
+    margin: 25px auto;
+    padding: 5px;
+    width: 40%;
+}

@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <div class="donate">
-            <a href="#">
+            <a href="donate/form.php">
                 Say Thanks
             </a>
         </div>
