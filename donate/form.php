@@ -13,9 +13,9 @@
             <h2>Donation Now</h2>
             <form action="checkout.php" method="post">
                 <label for="name">Atas Nama:</label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" required>
                 <label for="nominal">Jumlah Dana:</label>
-                <input type="number" name="nominal" id="nominal">
+                <input type="number" name="nominal" id="nominal" min="1000" value="1000" required>
                 <button type="submit">Give Us</button>
             </form>
         </div>

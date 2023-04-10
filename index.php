@@ -9,6 +9,8 @@
     <style type="text/css">
         * {cursor: url(https://cur.cursors-4u.net/symbols/sym-5/sym453.cur), auto !important}
     </style>
+    <!-- paricle effect -->
+    <link rel="stylesheet" href="css/particles.css">
     <!-- my style -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -36,5 +38,7 @@
     </div>
 
     <script src="js/script.js"></script>
+    <!-- particle effect -->
+    <script src="js/particles.js"></script>
 </body>
 </html>

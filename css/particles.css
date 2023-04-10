@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+    body {
+        min-height: 100vh;
+        width: 100%;
+        background-color: #111;
+        overflow: hidden;
+        position: relative;
+    }
+    .particle {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: #104515;
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .particle::before {
+        content: '';
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border-radius: 50%;
+        animation: runAnimate 2s linear infinite;
+    }
+    @keyframes runAnimate {
+        from {
+            transform: translate(0px);
+        }
+        to {
+            transform: translate(300px);
+        }
+    }
